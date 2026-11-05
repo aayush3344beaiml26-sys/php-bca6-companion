@@ -1,0 +1,11 @@
+import {fileURLToPath} from 'node:url';
+import fs from 'node:fs';
+import {execFileSync} from 'node:child_process';
+process.chdir(fileURLToPath(new URL('..',import.meta.url)));
+const book=JSON.parse(fs.readFileSync('source/content.json','utf8'));
+fs.writeFileSync('site/assets/content.js','window.BOOK = '+JSON.stringify(book,null,2)+';\n');
+execFileSync(process.execPath,['scripts/build-pages.mjs'],{stdio:'inherit'});
+execFileSync(process.execPath,['scripts/build-runtime.mjs'],{stdio:'inherit'});
+execFileSync('python3',['scripts/build-downloads.py'],{stdio:'inherit'});
+execFileSync(process.execPath,['scripts/generate-qr.mjs'],{stdio:'inherit'});
+execFileSync(process.execPath,['scripts/check.mjs'],{stdio:'inherit'});

@@ -1,0 +1,15 @@
+import {build} from 'esbuild';
+import fs from 'node:fs';
+import path from 'node:path';
+const root=path.resolve('site/assets');
+fs.mkdirSync(root+'/runtime/php83/asyncify',{recursive:true});
+await build({entryPoints:['source/php-worker.mjs'],outfile:root+'/runtime/php-worker.js',bundle:true,format:'esm',platform:'browser',target:'es2022',minify:true,loader:{'.dat':'empty','.so':'empty','.la':'empty'},external:['worker_threads','./php83/asyncify/php_8_3.js','./php83/jspi/php_8_3.js'],plugins:[{name:'only-php83',setup(b){b.onResolve({filter:/^@php-wasm\/web-\d/},()=>({path:path.resolve('source/runtime-loader.mjs')}));}}]});
+const src='node_modules/@php-wasm/web-8-3/asyncify';
+fs.copyFileSync(src+'/php_8_3.js',root+'/runtime/php83/asyncify/php_8_3.js');
+fs.cpSync(src+'/8_3_36',root+'/runtime/php83/asyncify/8_3_36',{recursive:true});
+fs.mkdirSync(root+'/runtime/php83/jspi',{recursive:true});
+fs.copyFileSync('node_modules/@php-wasm/web-8-3/jspi/php_8_3.js',root+'/runtime/php83/jspi/php_8_3.js');
+fs.cpSync('node_modules/@php-wasm/web-8-3/jspi/8_3_36',root+'/runtime/php83/jspi/8_3_36',{recursive:true});
+fs.mkdirSync(root+'/vendor',{recursive:true});
+await build({stdin:{contents:`import QRCode from 'qrcode'; window.QRCode=QRCode;`,resolveDir:process.cwd()},outfile:root+'/vendor/qrcode.js',bundle:true,format:'iife',platform:'browser',minify:true});
+console.log('Runtime and QR library bundled.');

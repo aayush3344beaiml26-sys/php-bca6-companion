@@ -1,0 +1,74 @@
+[
+  {
+    "label": "Companion home",
+    "url": "https://aayush3344beaiml26-sys.github.io/php-bca6-companion/",
+    "png": "00-companion-home.png",
+    "svg": "00-companion-home.svg"
+  },
+  {
+    "label": "Chapter 1",
+    "url": "https://aayush3344beaiml26-sys.github.io/php-bca6-companion/chapters/chapter-1.html",
+    "png": "01-chapter-1.png",
+    "svg": "01-chapter-1.svg"
+  },
+  {
+    "label": "Chapter 2",
+    "url": "https://aayush3344beaiml26-sys.github.io/php-bca6-companion/chapters/chapter-2.html",
+    "png": "02-chapter-2.png",
+    "svg": "02-chapter-2.svg"
+  },
+  {
+    "label": "Chapter 3",
+    "url": "https://aayush3344beaiml26-sys.github.io/php-bca6-companion/chapters/chapter-3.html",
+    "png": "03-chapter-3.png",
+    "svg": "03-chapter-3.svg"
+  },
+  {
+    "label": "Chapter 4",
+    "url": "https://aayush3344beaiml26-sys.github.io/php-bca6-companion/chapters/chapter-4.html",
+    "png": "04-chapter-4.png",
+    "svg": "04-chapter-4.svg"
+  },
+  {
+    "label": "Chapter 5",
+    "url": "https://aayush3344beaiml26-sys.github.io/php-bca6-companion/chapters/chapter-5.html",
+    "png": "05-chapter-5.png",
+    "svg": "05-chapter-5.svg"
+  },
+  {
+    "label": "Chapter 6",
+    "url": "https://aayush3344beaiml26-sys.github.io/php-bca6-companion/chapters/chapter-6.html",
+    "png": "06-chapter-6.png",
+    "svg": "06-chapter-6.svg"
+  },
+  {
+    "label": "Chapter 7",
+    "url": "https://aayush3344beaiml26-sys.github.io/php-bca6-companion/chapters/chapter-7.html",
+    "png": "07-chapter-7.png",
+    "svg": "07-chapter-7.svg"
+  },
+  {
+    "label": "Chapter 8",
+    "url": "https://aayush3344beaiml26-sys.github.io/php-bca6-companion/chapters/chapter-8.html",
+    "png": "08-chapter-8.png",
+    "svg": "08-chapter-8.svg"
+  },
+  {
+    "label": "Chapter 9",
+    "url": "https://aayush3344beaiml26-sys.github.io/php-bca6-companion/chapters/chapter-9.html",
+    "png": "09-chapter-9.png",
+    "svg": "09-chapter-9.svg"
+  },
+  {
+    "label": "Chapter 10",
+    "url": "https://aayush3344beaiml26-sys.github.io/php-bca6-companion/chapters/chapter-10.html",
+    "png": "10-chapter-10.png",
+    "svg": "10-chapter-10.svg"
+  },
+  {
+    "label": "Practical checklist",
+    "url": "https://aayush3344beaiml26-sys.github.io/php-bca6-companion/practicals.html",
+    "png": "11-practical-checklist.png",
+    "svg": "11-practical-checklist.svg"
+  }
+]

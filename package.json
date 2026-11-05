@@ -1,0 +1,19 @@
+{
+  "name": "php-bca6-companion",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Chapter-wise practice companion for Website Development Using PHP, BCA Semester VI",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "python3 -m http.server 8765 --bind 127.0.0.1 --directory site",
+    "check": "node scripts/check.mjs",
+    "qr": "node scripts/generate-qr.mjs"
+  },
+  "devDependencies": {
+    "@php-wasm/universal": "3.1.62",
+    "@php-wasm/web": "3.1.62",
+    "esbuild": "0.28.2",
+    "qrcode": "1.5.4"
+  }
+}
