@@ -4,13 +4,13 @@ For PHP/HTML examples, serve this folder using PHP 8.3: `php -S localhost:8000`.
 
 ## Explanation
 
-setcookie sends a response header. It does not immediately change the current request’s $_COOKIE array. The allowlist limits the accepted preference.
+Only POST sets the preference, so a later GET does not overwrite it. setcookie sends a response header and does not immediately change the current request’s $_COOKIE array. The browser returns the stored cookie with a later request. The allowlist limits accepted preferences.
 
 ## Reference result
 
 ```text
-Preference sent. Refresh to read it: (not received yet)
-On a later request, the previously stored preference appears.
+First POST on a fresh browser: Preference sent. Cookie received with this request: (not received yet)
+Next GET: Cookie received with this request: dark (if dark was selected)
 ```
 
 ## Try this

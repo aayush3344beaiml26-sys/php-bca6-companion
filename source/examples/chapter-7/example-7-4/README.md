@@ -4,7 +4,7 @@ For PHP/HTML examples, serve this folder using PHP 8.3: `php -S localhost:8000`.
 
 ## Explanation
 
-This needs a real multipart HTTP upload. Download the handler and form together. The generated filename avoids trusting a user-supplied path.
+This needs a real multipart HTTP upload. Download the handler and form together. The generated filename avoids trusting a user-supplied path. When serving the example folder with PHP’s built-in server, the default upload folder is outside that document root. With XAMPP, set UPLOAD_DIR to a folder outside htdocs.
 
 ## Reference result
 

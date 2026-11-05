@@ -1,5 +1,7 @@
 # PHP Companion
 
+[Open the live companion](https://aayush3344beaiml26-sys.github.io/php-bca6-companion/) · [GitHub repository](https://github.com/aayush3344beaiml26-sys/php-bca6-companion)
+
 A chapter-wise learning website for the supplied **Website Development Using PHP**, BCA Semester VI, Panjab University edition.
 
 ## What is included

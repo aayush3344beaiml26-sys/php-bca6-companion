@@ -11,7 +11,7 @@ $types = ['image/jpeg' => 'jpg', 'image/png' => 'png'];
 if (!isset($types[$mime])) {
     http_response_code(422); exit('Only JPEG and PNG are accepted.');
 }
-$folder = dirname(__DIR__) . '/private-uploads';
+$folder = getenv('UPLOAD_DIR') ?: dirname(__DIR__) . '/private-uploads';
 if (!is_dir($folder) && !mkdir($folder, 0700, true)) {
     http_response_code(500); exit('Storage unavailable.');
 }
